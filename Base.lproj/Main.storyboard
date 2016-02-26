@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efn-Fb-WdZ">
+                                <rect key="frame" x="270" y="232" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="51R-1r-CVi"/>
+                                    <constraint firstAttribute="width" constant="60" id="IK5-J8-6Eb"/>
+                                </constraints>
+                                <state key="normal" title="停止录音"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="51R-1r-CVi"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N30-to-00B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J25-vc-HSN">
+                                <rect key="frame" x="270" y="302" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="LMR-WO-ciA"/>
+                                    <constraint firstAttribute="height" constant="30" id="sRJ-uZ-5XZ"/>
+                                </constraints>
+                                <state key="normal" title="播放录音"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sRJ-uZ-5XZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="PlayRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5qA-RV-ljI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最多录制60s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKZ-gQ-sgL">
+                                <rect key="frame" x="189" y="193" width="222" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="PtX-91-5WH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crH-P4-u9F">
+                                <rect key="frame" x="266.5" y="149" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7wh-Fn-q6e"/>
+                                    <constraint firstAttribute="width" constant="67" id="U2e-BK-M26"/>
+                                </constraints>
+                                <state key="normal" title="开始录音"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7wh-Fn-q6e"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="snG-0L-umi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="efn-Fb-WdZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Vj-d1-edl"/>
+                            <constraint firstItem="efn-Fb-WdZ" firstAttribute="top" secondItem="rKZ-gQ-sgL" secondAttribute="bottom" constant="21" id="5aJ-Ko-kw6"/>
+                            <constraint firstItem="crH-P4-u9F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7bm-ad-GJL"/>
+                            <constraint firstItem="rKZ-gQ-sgL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="162" id="9Q3-F4-vkl"/>
+                            <constraint firstItem="rKZ-gQ-sgL" firstAttribute="top" secondItem="crH-P4-u9F" secondAttribute="bottom" constant="14" id="GNd-qd-bS3"/>
+                            <constraint firstItem="efn-Fb-WdZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="251" id="MCU-gR-AfJ"/>
+                            <constraint firstItem="efn-Fb-WdZ" firstAttribute="leading" secondItem="crH-P4-u9F" secondAttribute="leading" id="QqN-hn-hV6"/>
+                            <constraint firstItem="J25-vc-HSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sqg-CY-6LU"/>
+                            <constraint firstItem="crH-P4-u9F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WhC-19-Sky"/>
+                            <constraint firstItem="crH-P4-u9F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hB1-ns-Cql"/>
+                            <constraint firstItem="efn-Fb-WdZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iWe-HB-LYu"/>
+                            <constraint firstItem="rKZ-gQ-sgL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kaf-ca-5O4"/>
+                            <constraint firstItem="J25-vc-HSN" firstAttribute="top" secondItem="efn-Fb-WdZ" secondAttribute="bottom" constant="40" id="mXR-QP-S2B"/>
+                            <constraint firstItem="crH-P4-u9F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="129" id="pcq-QU-bQ3"/>
+                            <constraint firstItem="efn-Fb-WdZ" firstAttribute="leading" secondItem="J25-vc-HSN" secondAttribute="leading" id="pij-21-ji5"/>
+                            <constraint firstItem="J25-vc-HSN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rK2-up-peN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9Q3-F4-vkl"/>
+                                <exclude reference="WhC-19-Sky"/>
+                                <exclude reference="hB1-ns-Cql"/>
+                                <exclude reference="MCU-gR-AfJ"/>
+                                <exclude reference="QqN-hn-hV6"/>
+                                <exclude reference="iWe-HB-LYu"/>
+                                <exclude reference="pij-21-ji5"/>
+                                <exclude reference="rK2-up-peN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="noticeLabel" destination="rKZ-gQ-sgL" id="hce-Ii-01E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="297"/>
+        </scene>
+    </scenes>
+</document>
